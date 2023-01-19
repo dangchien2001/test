@@ -1,0 +1,152 @@
+.header-container {
+    height: 56px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    box-shadow: 0 0 3px rgba(1, 22, 30, 0.16);
+    align-items: center;
+}
+
+.logo-container {
+    height: 100%;
+    width: 200px;
+    background-color: #041434;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon-container {
+    height: 24px;
+    width: 24px;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-icon {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -428px -92px;
+    width: 16px;
+    height: 16px;
+}
+
+.logo-icon-container {
+    margin-left: 16px;
+    width: calc(100% - 56px);
+    height: 100%;
+    cursor: pointer;
+}
+
+.logo-icon {
+    height: 100%;
+    width: 100%;
+    background-image: url(../../assets/img/Logo_Module_TiengViet_White.66947422.svg);
+    background-size: 96px 32px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.company-name-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.select-icon-container {
+    margin-left: 12px;
+    height: 100%;
+    width: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.select-icon {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -847px -35px;
+    width: 16px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.company-name {
+    font-size: 16px;
+}
+
+.company-drop-list-icon {
+    margin-left: 6px;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.drop-list-icon {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -1129px -365px;
+    width: 14px;
+    height: 8px;
+    cursor: pointer;
+}
+
+.company-name {
+    cursor: pointer;
+}
+
+.user-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.noitification-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.noitification-icon {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -788px -30px;
+    width: 22px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.avatar-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -352px -894px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.user-name {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.user-drop-down-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.user-drop-down-icon {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -1078px -38px;
+    width: 9px;
+    height: 6px;
+    cursor: pointer;
+}
+
+.blank {
+    flex: 1;
+}

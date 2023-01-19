@@ -1,0 +1,53 @@
+.action-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-list {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.action-list-icon {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -564px -365px;
+    width: 8px;
+    height: 5px;
+}
+
+.edit-btn {
+    cursor: pointer;
+}
+
+.action-list-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    box-shadow: 0 0 6px #ccc;
+}
+
+.action {
+    height: 34px;
+    width: 150px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.action:hover {
+    background-color: #e5e8ec;
+    color: #2ca01c;
+}
+
+.z-index-1 {
+    z-index: 1;
+}

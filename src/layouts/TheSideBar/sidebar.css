@@ -1,0 +1,250 @@
+.sidebar-container {
+    width: 200px;
+    height: calc(100vh - 56px);
+    background-color: #041434;
+    padding: 20px 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b8bcc3;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar-item-container {
+    height: 44px;
+    width: 176px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    margin-bottom: 4px;
+}
+
+.sidebar-item-container:hover,
+.active {
+    background-color: hsl(220, 100%, 83%, 16%);
+}
+
+.sidebar-item-container:hover .sidebar-item-text,
+.active .sidebar-item-text {
+    color: #ffffff;
+}
+
+.sidebar-item-container:hover .lobby,
+.active .sidebar-item-icon-container .lobby {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -33px -1587px;
+    width: 18px;
+    height: 20px;
+}
+
+.sidebar-item-icon-container {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-item-icon {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -33px -1630px;
+    width: 18px;
+    height: 20px;
+}
+
+.sidebar-item-text {
+    margin-left: 12px;
+    color: #869ab8;
+    font-family: Roboto Medium;
+}
+
+.money {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -78px -1631px;
+    width: 14px;
+    height: 18px;
+}
+
+.sidebar-item-container:hover .money,
+.active .sidebar-item-icon-container .money {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -78px -1588px;
+    width: 14px;
+    height: 18px;
+}
+
+.giveMoney {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -121px -1633px;
+    width: 16px;
+    height: 16px;
+}
+
+.sidebar-item-container:hover .giveMoney,
+.active .sidebar-item-icon-container .giveMoney {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -121px -1590px;
+    width: 16px;
+    height: 16px;
+}
+
+.shopping {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -165px -1632px;
+    width: 16px;
+    height: 18px;
+}
+
+.sidebar-item-container:hover .shopping,
+.active .sidebar-item-icon-container .shopping {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -165px -1589px;
+    width: 16px;
+    height: 18px;
+}
+
+.sale {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -206px -1631px;
+    width: 20px;
+    height: 18px;
+}
+
+.sidebar-item-container:hover .sale,
+.active .sidebar-item-icon-container .sale {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -206px -1588px;
+    width: 20px;
+    height: 18px;
+}
+
+.invoice {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -254px -1632px;
+    width: 14px;
+    height: 17px;
+}
+
+.sidebar-item-container:hover .invoice,
+.active .sidebar-item-icon-container .invoice {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -254px -1589px;
+    width: 14px;
+    height: 17px;
+}
+
+.warehouse {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -294px -1632px;
+    width: 18px;
+    height: 17px;
+}
+
+.sidebar-item-container:hover .warehouse,
+.active .sidebar-item-icon-container .warehouse {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -294px -1589px;
+    width: 18px;
+    height: 17px;
+}
+
+.tool {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -339px -1633px;
+    width: 18px;
+    height: 17px;
+}
+
+.sidebar-item-container:hover .tool,
+.active .sidebar-item-icon-container .tool {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -339px -1590px;
+    width: 18px;
+    height: 17px;
+}
+
+.asset {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -382px -1632px;
+    width: 17px;
+    height: 18px;
+}
+
+.sidebar-item-container:hover .asset,
+.active .sidebar-item-icon-container .asset {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -382px -1589px;
+    width: 17px;
+    height: 18px;
+}
+
+.tax {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -427px -1634px;
+    width: 16px;
+    height: 16px;
+}
+
+.sidebar-item-container:hover .tax,
+.active .sidebar-item-icon-container .tax {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -427px -1591px;
+    width: 16px;
+    height: 16px;
+}
+
+.price {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -471px -1633px;
+    width: 17px;
+    height: 17px;
+}
+
+.sidebar-item-container:hover .price,
+.active .sidebar-item-icon-container .price {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -471px -1590px;
+    width: 17px;
+    height: 17px;
+}
+
+.total {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -514px -1632px;
+    width: 16px;
+    height: 18px;
+}
+
+.sidebar-item-container:hover .total,
+.active .sidebar-item-icon-container .total {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -514px -1590px;
+    width: 15px;
+    height: 16px;
+}
+
+.budget {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -382px -1664px;
+    width: 16px;
+    height: 16px;
+}
+
+.sidebar-item-container:hover .budget,
+.active .sidebar-item-icon-container .budget {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -427px -1664px;
+    width: 16px;
+    height: 16px;
+}
+
+.report {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -552px -1636px;
+    width: 14px;
+    height: 13px;
+}
+
+.sidebar-item-container:hover .report,
+.active .sidebar-item-icon-container .report {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -552px -1593px;
+    width: 14px;
+    height: 13px;
+}
+
+.finance {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -207px -1667px;
+    width: 17px;
+    height: 14px;
+}
+
+.sidebar-item-container:hover .finance,
+.active .sidebar-item-icon-container .finance {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -251px -1667px;
+    width: 17px;
+    height: 14px;
+}

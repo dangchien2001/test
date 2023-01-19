@@ -1,0 +1,86 @@
+.dialog-layer {
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(216, 15%, 94%, 50%);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-container {
+    height: 173px;
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 24px;
+}
+
+.dialog-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dialog-hearder-title {
+    font-family: Roboto Bold;
+    font-size: 20px;
+}
+
+.blank {
+    flex: 1;
+}
+
+.dialog-cancel-btn {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dialog-cancel-icon {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -147px -147px;
+    width: 18px;
+    height: 18px;
+}
+
+.dialog-content {
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.dialog-footer {
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+}
+
+.dialog-btn {
+    min-width: 80px;
+}
+
+.dialog-white-btn {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+}
+
+.dialog-icon-container {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.dialos-icon {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -593px -145px;
+    width: 22px;
+    height: 23px;
+}

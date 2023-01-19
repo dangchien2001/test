@@ -1,0 +1,65 @@
+.date-picker-container {
+    height: 36px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 12px;
+    position: relative;
+    border: 1px solid #e0e0e0;
+}
+
+.date-picker-day,
+.date-picker-month {
+    height: 34px;
+    width: 26px;
+    border: 0px;
+    outline: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.date-picker-year {
+    height: 34px;
+    width: 36px;
+    border: 0px;
+    outline: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.date-picker-day::placeholder,
+.date-picker-month::placeholder,
+.date-picker-year::placeholder {
+    text-align: center;
+    font-size: 12px;
+    font-family: Roboto Italic;
+}
+
+::-webkit-inner-spin-button {
+    display: none;
+}
+
+.span {
+    pointer-events: none;
+}
+
+.logo-datepicker-container {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.logo-date-picker {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -128px -312px;
+    width: 16px;
+    height: 16px;
+}

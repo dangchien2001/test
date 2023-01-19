@@ -1,0 +1,13 @@
+.check-box-style {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.select {
+    background-color: #e5e8ec;
+}
+
+.z-index {
+    z-index: 1;
+}

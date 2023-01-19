@@ -1,0 +1,60 @@
+.table-container {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-header-item:last-child,
+.table-body-item:last-child {
+    border-left: 1px solid #c7c7c7;
+    border-right: 0px;
+}
+
+.table-header-item {
+    border-bottom: 1px solid #c7c7c7;
+    border-right: 1px solid #c7c7c7;
+    background-color: #e5e8ec;
+    height: 34px;
+    font-family: Roboto Bold;
+}
+
+.table-body-item {
+    background-color: #ffffff;
+    border-bottom: 1px solid #c7c7c7;
+    border-right: 1px solid #c7c7c7;
+    height: 34px;
+}
+
+.table-body-item,
+.table-header-item {
+    padding: 0 10px;
+}
+
+.table-header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.action-container {
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+
+.check-box-style {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+tr:hover td {
+    background-color: #e5e8ec;
+}
+
+.select {
+    background-color: #e5e8ec;
+}
+
+.z-index {
+    z-index: 1;
+}

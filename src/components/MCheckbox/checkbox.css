@@ -1,0 +1,28 @@
+.checkbox-container {
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    border: 1px solid #afafaf;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-check-icon {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.check-icon {
+    background: url('../../assets/img/Sprites.64af8f61.svg') no-repeat -1225px -363px;
+    width: 14px;
+    height: 11px;
+}
