@@ -1,12 +1,24 @@
 <template>
     <td class="table-body-item check-box-style" :class="isSelect">
-        <MCheckbox @isClick="handleSelect"></MCheckbox>
+        <MCheckbox @isClick="handleSelect" v-model="isSelect"></MCheckbox>
     </td>
-    <td class="table-body-item" :style="data.style" v-for="(data, index) in datas" :key="index" :class="isSelect">
+    <td
+        class="table-body-item"
+        :style="data.style"
+        v-for="(data, index) in datas"
+        :key="index"
+        :class="isSelect"
+    >
         {{ data.data }}
     </td>
-    <td class="table-body-item action-container" :class="isSelect + ' ' + zIndex">
-        <MEditButton @zIndex="handleIndex"></MEditButton>
+    <td
+        class="table-body-item action-container"
+        :class="isSelect + ' ' + zIndex"
+    >
+        <MEditButton
+            @zIndex="handleIndex"
+            @deleteEmployee="deleteEmployee"
+        ></MEditButton>
     </td>
 </template>
 <script>
@@ -15,7 +27,8 @@ import MEditButton from '../MEditButton/MEditButton.vue';
 
 export default {
     name: 'MRow',
-    props: ['datas'],
+    props: ['datas', '', 'modelValue'],
+    emits: ['deleteEmployee', ''],
     components: {
         MCheckbox,
         MEditButton,
@@ -26,13 +39,9 @@ export default {
          * Created date: 13/01/2023
          * Description: Hàm dùng để bôi đen dòng sau khi chọn checkbox
          */
-        handleSelect(isSelect) {
-            if (isSelect == true) {
-                this.isSelect = 'select';
-            }
-            if (isSelect == false) {
-                this.isSelect = '';
-            }
+        handleSelect() {
+            this.isSelect = this.select == true ? 'select' : '';
+            this.select = !this.select;
         },
         /***
          * Created by: Nguyễn Đăng Chiến
@@ -47,11 +56,26 @@ export default {
                 this.zIndex = '';
             }
         },
+        /**
+         * Created by: Nguyễn Đăng Chiến
+         * Created date: 19/01/2023
+         * Description: Hàm dùng để emit tín hiệu xóa nhân viên từ MEditButton ra ngoài
+         */
+        deleteEmployee() {
+            console.log(this.datas.EmployeeId.id);
+            this.$emit('deleteEmployee', this.datas.EmployeeId.id);
+        },
+    },
+    watch: {
+        modelValue: function () {
+            this.isSelect = this.modelValue;
+        },
     },
     data() {
         return {
             isSelect: '',
             zIndex: '',
+            select: true,
         };
     },
 };

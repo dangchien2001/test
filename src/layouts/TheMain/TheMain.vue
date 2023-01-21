@@ -29,6 +29,7 @@
                     :columns="columns"
                     :datas="datas"
                     v-if="!loading"
+                    @deleteEmployee="deleteEmployee"
                 ></MTable>
                 <div class="loading-container" v-if="loading">
                     <MLoading></MLoading>
@@ -48,6 +49,7 @@ import MLoading from '../../components/MLoading/MLoading.vue';
 export default {
     name: 'TheMain',
     props: ['modelValue'],
+    emits: ['deleteEmployee'],
     components: {
         MButton,
         MInput,
@@ -60,10 +62,9 @@ export default {
             //lay du lieu
             axios
                 .get('https://cukcuk.manhnv.net/api/v1/employees')
-                .then(
-                    (response) =>
-                        (this.datas = resource.formatData(response.data)),
-                );
+                .then((response) => {
+                    this.datas = resource.formatData(response.data);
+                });
         } catch (error) {
             console.log(error);
         }
@@ -98,10 +99,9 @@ export default {
                 //lay du lieu
                 axios
                     .get('https://cukcuk.manhnv.net/api/v1/employees')
-                    .then(
-                        (response) =>
-                            (this.datas = resource.formatData(response.data)),
-                    );
+                    .then((response) => {
+                        this.datas = resource.formatData(response.data);
+                    });
             } catch (error) {
                 console.log(error);
             }
@@ -113,6 +113,14 @@ export default {
          */
         onShowForm() {
             this.$emit('showForm');
+        },
+        /***
+         * Created by: Nguyễn Đăng Chiến
+         * Created date: 19/01/2023
+         * Desciption: Hàm dùng để gửi tín hiệu xóa nhân viên từ MTable ra ngoài
+         */
+        deleteEmployee(employeeId) {
+            this.$emit('deleteEmployee', employeeId);
         },
     },
     data() {

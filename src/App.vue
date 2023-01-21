@@ -2,7 +2,11 @@
     <div class="app-container">
         <TheHeader></TheHeader>
         <TheSideBar></TheSideBar>
-        <TheMain @showForm="showForm" v-model="resetData"></TheMain>
+        <TheMain
+            @showForm="showForm"
+            v-model="resetData"
+            @deleteEmployee="storeEmployeeId"
+        ></TheMain>
         <EmployeeDetail
             v-if="isShow"
             @handleForm="showForm"
@@ -15,6 +19,13 @@
             v-if="isShowDialog"
             @cancel="showDialog"
             @accept="acceptData"
+        ></MDialog>
+        <MDialog
+            :title="'Cảnh báo'"
+            :description="'Bạn có chắc muốn xóa không'"
+            v-if="isShowDialog"
+            @cancel="showDialog"
+            @accept="deleteData"
         ></MDialog>
     </div>
 </template>
@@ -61,6 +72,10 @@ export default {
         storeEmployee(employee) {
             this.employee = employee;
         },
+        storeEmployeeId(employeeId) {
+            this.isShowDialog = !this.isShowDialog;
+            this.employeeId = employeeId;
+        },
         /***
          * Created by: Nguyễn Đăng Chiến
          * Created date: 19/01/2023
@@ -70,6 +85,11 @@ export default {
             this.postEmployee();
             this.isShowDialog = !this.isShowDialog;
             this.isShow = !this.isShow;
+        },
+        deleteData() {
+            console.log(this.employeeId);
+            this.deleteEmployee();
+            this.isShowDialog = !this.isShowDialog;
         },
         /***
          * Created by: Nguyễn Đăng Chiến
@@ -128,6 +148,21 @@ export default {
                     console.log(error);
                 });
         },
+        /**
+         * Created by: Nguyễn Đăng Chiến
+         * Created date: 19/01/2023
+         * Description: Hàm dùng để xóa nhân viên
+         */
+        deleteEmployee() {
+            axios
+                .delete(
+                    `https://cukcuk.manhnv.net/api/v1/Employees/${this.employeeId}`,
+                    {},
+                )
+                .then(() => {
+                    this.resetData = !this.resetData;
+                });
+        },
     },
     data() {
         return {
@@ -135,6 +170,7 @@ export default {
             isShowDialog: false,
             employee: {},
             resetData: false,
+            employeeId: null,
         };
     },
 };

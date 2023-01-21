@@ -8,11 +8,18 @@
 <script>
 export default {
     name: 'MCheckbox',
+    props: ['', 'modelValue'],
     methods: {
         handleShow() {
             this.isSelect = !this.isSelect;
+            console.log('isSelect thay doi: ', this.isSelect);
             this.$emit('isClick', this.isSelect);
         },
+    },
+    watch: {
+        // modelValue: function () {
+        //     this.isSelect = !this.isSelect;
+        // },
     },
     data() {
         return {

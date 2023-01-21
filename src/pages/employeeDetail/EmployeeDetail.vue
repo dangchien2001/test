@@ -25,6 +25,7 @@
                         <div class="label-input">
                             <div class="label">Mã</div>
                             <MInput
+                                refs="focusMe"
                                 style="width: 100%"
                                 v-model="this.employee.code"
                             ></MInput>
@@ -166,6 +167,7 @@ import MCombobox from '../../components/MInput/MCombobox.vue';
 import MDatePicker from '../../components/MDatePicker/MDatePicker.vue';
 import MGender from '@/components/MGenderBox/MGender.vue';
 import MButton from '@/components/MButton/MButton.vue';
+import axios from 'axios';
 export default {
     name: 'EmployeeDetail',
     components: {
@@ -253,10 +255,30 @@ export default {
             deep: true,
         },
     },
+    created() {
+        /**
+         * Created by: Nguyễn Đăng Chiến
+         * Created date: 29/01/2023
+         * Description: Hàm dùng để lấy employeeCode lớn nhất + 1 rồi focus vào trường mã nhân viên sau khi mở form
+         */
+        try {
+            axios
+                .get('https://cukcuk.manhnv.net/api/v1/employees')
+                .then((response) => {
+                    const code = response.data.map((employee) => {
+                        return employee.EmployeeCode.replace(/[^0-9]/g, '');
+                    });
+                    const max = Math.max(...code);
+                    this.employee.code = 'NV-' + (max + 1);
+                });
+        } catch (error) {
+            console.log(error);
+        }
+    },
     data() {
         return {
             employee: {
-                code: 'NV-10012001',
+                code: '',
                 name: null,
                 department: null,
                 position: null,
@@ -270,6 +292,7 @@ export default {
                 phoneCompany: null,
                 email: null,
             },
+            datas: {},
         };
     },
 };

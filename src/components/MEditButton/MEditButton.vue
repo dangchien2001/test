@@ -5,7 +5,7 @@
             <div class="action-list-icon"></div>
             <div class="action-list-dropdown" v-if="isShow">
                 <div class="action">Nhân bản</div>
-                <div class="action">Xóa</div>
+                <div class="action" @click="deleteEmployee">Xóa</div>
                 <div class="action">Ngừng sử dụng</div>
             </div>
         </div>
@@ -14,10 +14,19 @@
 <script>
 export default {
     name: 'MEditButton',
+    emits: [],
     methods: {
         handleShow() {
             this.isShow = !this.isShow;
             this.$emit('zIndex', this.isShow);
+        },
+        /**
+         * Created by: Nguyễn Đăng Chiến
+         * Created date: 19/01/2023
+         * Description: Hàm dùng để emit tín hiện xóa employee ra ngoài
+         */
+        deleteEmployee() {
+            this.$emit('deleteEmployee');
         },
     },
     data() {

@@ -89,12 +89,13 @@ var resource = {
      *  - title, style (chiều rộng, căn chỉnh text với các tiêu chí: ngày, tháng căn giữa, tiền, dữ liệu số: căn phải, text căn trái )
      * Updated: 13/01/2023 : chỉnh sửa kích thước, thêm một số style để sticky
      * Updated: 14/01/2023: Loại bỏ thuộc tính width trong đối tượng tránh nhầm lẫn
+     * Updated: 19/01/2023: chỉnh lại kích thước genderName cho phù hợp 100 -> 150
      */
     columns: [
-        {
-            title: '',
-            style: 'min-width: 20px; text-align: center; position: sticky; top: 0; left: 0',
-        },
+        // {
+        //     title: '',
+        //     style: 'min-width: 20px; text-align: center; position: sticky; top: 0; left: 0',
+        // },
         {
             title: 'Mã nhân viên',
             style: 'min-width: 150px; text-align: left; position: sticky; top: 0; left: 41px',
@@ -107,7 +108,7 @@ var resource = {
         {
             title: 'Giới tính',
             // width: '200px',
-            style: 'min-width: 100px; text-align: left',
+            style: 'min-width: 150px; text-align: left',
         },
         {
             title: 'Ngày sinh',
@@ -239,6 +240,7 @@ var resource = {
      * Description: hàm format dữ liệu để khớp với bảng employee
      * Updated: 13/01/2023: thêm thuộc tính style vào mỗi đối tượng để căn lề
      * 13/01/2023: thêm một số chỉnh sửa style phục vụ sticky
+     * 19/01/2023: thêm trường id xóa trường bankNam phục vụ cho chức năng xóa
      */
     formatData(dataTests) {
         return dataTests.map((dataTest) => {
@@ -275,9 +277,8 @@ var resource = {
                     style: '',
                     data: null,
                 },
-                BankName: {
-                    style: '',
-                    data: null,
+                EmployeeId: {
+                    id: dataTest.EmployeeId,
                 },
                 BankPlace: {
                     style: 'border-right: 0px',
