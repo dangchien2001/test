@@ -1,6 +1,6 @@
 .table-container {
     border-collapse: separate;
-    border-spacing: 0;
+    border-spacing: 0; 
 }
 
 .table-header-item:last-child,
